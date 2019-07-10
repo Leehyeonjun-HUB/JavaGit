@@ -1,0 +1,146 @@
+학습 내용
+
+1. 상속 [-> 다형성]
+	1. 클래스간의 상속 관계
+	
+	2. 클래스 구성요소중 "변수와 메소드"만 상속
+		1. 변수
+		2. 생성자
+		3. 메소드
+		4. static{}
+		
+	3.구조
+		java.lang.Object : 모든 class의 최상위 root
+		부모
+		상속받는 자식
+		의류 클래스 추가 개발해서 공통된 속성과 메소드에 한해서 개발
+		바지, 셔츠, 스커트가 각 상속 받고 개별 클래스에 특화된 속성 및 메소드 추가 개발 구조 권장
+		
+	4. 필요성
+		- 코드의 재 사용성
+		- 기업 관점 : 개발 속도 향상
+		- 공통된 로직의 다양한 도메인이 있으나 is a 성립이 안 될경우 is a가 성립되는 특화된 클래스 추가 개발
+		- 예시
+			바지, 셔츠, 스커트
+			
+	5. 제약조건
+		1. 자식 is a 부모 관계가 성립되는 개념인 상속 권장
+		2. 예시
+			"고객 is a 직원" 관계는 상속 불가능
+			
+	6. 문법		
+		1. 상속시
+			class 자식클래스명 extends 부모클래스{
+				변수와 메소드만 상속
+				자식만의 변수, 메소드 추가 개발
+			}	
+		2. 자동 생성되는 코드
+			1. 클래스 선언구
+				extends Object
+			2. 생성자
+				생성자 미 구현시 자동 추가
+				생성자별 첫 라인에 부모 생성자 호출 가능한 super();
+			3. print() or println() 인경우 참조 타입 출려시 toString() 메소드 자동 호출		
+	
+		3. 메소드 재정의
+			1. overriding/override
+			2. rule
+				- 반환타입 메소드명 argument list는 100% 동일
+				- {} body 부분만 일부 수정
+			3. 권장
+			 	- super : super 즉 parent의 메소드 로직을 그대로 반영시 활용
+		4. 키워드
+			1. super
+				1. super. : 상위 즉 부모의 멤버 호출시, 주로 메소드 재정의시 사용
+				2. super( [..] ) : 생성자 내부의 첫 라인에서 부모 생성자 호출시 사용
+					- 생성자 내부의 첫 라인에서 부모 생성자 호출시 사용
+					- 미 코딩시 this() 없는 경우 컴파일 시점에 생성자 첫 라인에 자동 추가
+				
+			2. this
+				- 자신 타입 		
+				1. this. : 주로 로컬 변수와 멤버 변수명이 동일한 경우 멤버 변수임의 지정하는 의도로 주로 사용
+				2. this([..]) : 
+					- 필요에 의해 명시적인 코딩으로 사용 가능
+					- 동일한 클래스의 다른 생성자 호출시 사용
+					- super([..]) 와는 상극 
+	
+2. API 활용 및 static 메소드의 필요성
+		
+3. 용어
+	1. API
+		- Application Programming Interface
+		- library
+		- 지원받는 사용가능한 프로그램들
+		- String, System
+	2. JDK
+		- javac.exe
+			>javac file명.java
+		- java.exe		
+			>java file명
+		- API도 사용중(*.class)	
+	
+4. 주요 키워드
+	1. extends
+	2. super. super()
+	3. overriding
+	4. this
+	5. java.lang.Object
+	6. static 적용 적합성	
+	7. API
+	
+5. 다형성 필요성
+class A{} -> class A extends Object{}
+class B extends A{}
+class C extends B{}
+class D{} -> class D extends Object{}
+
+Object o = new Object();  o
+= new A();			o
+= new B();	o
+= new C();	o
+= new D();	o
+
+A o = new Object();	x
+= new A(); o
+= new B(); o
+= new C(); o
+= new D(); x
+
+B o = new Object();  x
+= new A(); x
+= new B(); o
+= new C();  o
+= new D(); x
+
+C o = new Object();  x
+= new A();x
+= new B();x
+= new C();o
+= new D();x
+
+D o = new Object();  x
+= new A();  x
+= new B();x
+= new C();x
+= new D();o
+
+public void method(Object v){
+	//객체 타입이면 처리 가능한 로직의 재사용성 극대화 시킨 메소드
+}
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			

@@ -1,0 +1,94 @@
+학습내용
+
+1. interface
+	1. 필요성
+	2. 구현 문법
+		- 다중상속과 같은 구조가 가능
+		- 상위 interface는 동시에 여러개 구현 가능
+		- 제약조건
+			: 하위 클래스 관점에서의 제약조건 : 미완성 메소드 재정의
+		1. interface 키워드 사용
+		2. 구성요소
+			1. 상수
+				public static final 자동 반영
+			2. 미완성 메소드
+				public abstract 자동 반영
+				abstract : 추상, 미완성
+				{} 절대 코딩 불가
+				구현로직에 따른 주석 제시
+				
+			3. 주석 : 강제 제약 조건		
+			
+	3. interface 스펙에 맞게 구현하는 하위 클래스 개발 방법
+		- 스펙에 맞게 완벽하게 재정의를 해서 사용
+		- 벤더사들이 제품을 판매하기 위한 용도로 
+		    특히 DB 접속 API들의 interface를 완벽하게 구동되게 구현해서 driver로 제공
+	
+2. 자료구조 제공하는 클래스들 학습
+	- 동적 메모리
+	- 사용 사유 : 데이터를 다양한 목적에 맞게 다양한 구조로 관리하게 도와주는 API
+		: 모든 자바 개발자 코드를 표.준.화
+		: Collections Framework
+	- 활용되는 데이터 타입은 객체 타입만 가능
+		: 8가지 기본 타입은  자료구조 클래스들은 사용 불가	
+		
+	1. package - java.util package
+	2. 배열과 흡사한 구조의 API - java.util.List라는 interface가 원조
+	3. 고유한 key로 value 구분 API - java.util.Map
+	4. value만 저장 가능 단 중복 불허 API	- java.util.Set
+
+3. 데이터 포멧 : JSON
+	1. 포멧
+		{"key1" : "value", "key2" : "value", ..}
+	2. json 포멧을 응용가능한 사이트
+		http://json.org
+	3. 용도
+		- 온라인상에 사용되는 데이터 포멧
+		- 비정형 데이터들을 저장 가능한 솔루션 저장 포멧
+		- nosql db들의 저장 포멧
+		
+	4. 장점
+		- key로 데이터 구분 또는 key와 index로 혼용해서 데이터 구분
+		- 구조화된 데이터 형식으로 최적				
+		
+4. 참조 사이트	
+	1. http://www.w3schools.com
+		- json 포멧 연습
+	2. http://d3js.org
+		- end user에게 js로 실시간 서비스 가능한 chart	
+	3. http://gojs.net/lastest/index.html
+		- go라는 구글에서 자바스크립트 기반으로 새로운 언어를 개발해서 그 언어로 상호작용이 가능한 chart 제공 사이트
+		- end user를 위한 서비스 사이트
+	4. http://json.org
+		- json 포멧 관련된 처리 언어의 library 지원 사이트
+		- 예시 : db에 모든 고객 정보 검색 요청
+			: 쿠팡의 DB 정보
+			end user(admin) -> web app -> DB -> 정상응답 -> web app~ -> end user(admin) : client 브라우저에게 응답
+			응답에 대한 권장 포멧은 json
+			다수의 데이터를 json.org에서 제공하는 library를 활용해서 json 포멧으로 변환해서 활용
+			브라우저에선 js(java script)로 데이터를 처리
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
+	
+	
+	
+	
+	
+	
+		
