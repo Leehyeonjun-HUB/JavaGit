@@ -1,0 +1,42 @@
+학습내용
+
+1. java.util package 학습
+2. collections framework이라고도 함
+3. jdk1.5부터 추가된 표기
+	- Object 타입의 또다른 표기
+	1. E - element
+	2. K - key
+	3. V - value
+	4. T - type
+	
+4. jdk1.5부터 제시된 메카니즘
+	1. 제네릭  
+	   1. Object 타입이기만 하면 모든 타입 저장 가능한 collections framework 들에게 타입 제한두는 기술	
+	   2. 문법
+	   	   - 제한 타입 명시를<타입>으로 표기
+		   -	
+	
+	2. wrapper class
+		1. autoboxing
+			- 기본 데이터값이 참조 타입으로 변환되어 대입되는 메카니즘
+	    	Integer i = new Integer(3);
+	    	Integer i2 = 3;     -> 컴파일 -> Integer i2 = new Integer(3);
+	    
+	    2. unboxing
+	    	- 객체 타입의 데이터를 기본 타입으로 변환해서 대입
+	    	int i = new Integer(1); 컴파일 후 int i = (new Integer(1)).intValue();   	   
+
+5. 미션 문제
+	http://json-lib.sourceforge.net/usage.html
+	1. test 구조도 직접 구상
+	2. test 데이터도 직접 구상
+	3. 결론 : json library를 활용한 아무 예제나 완성해 오기
+	4. domain 먼저 설정
+	5. 전제조건
+		- ArrayList와 HashMap 둘다 활용해서 다양한 메소드 구현하기
+		- 출력 데이터에 대한 UI는 고민하지 않기 	    	
+	    	
+	    	
+	    	
+	    	
+	    	
