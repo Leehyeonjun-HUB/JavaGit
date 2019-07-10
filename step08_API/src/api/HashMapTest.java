@@ -3,14 +3,6 @@ package api;
 import java.util.HashMap;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
-import model.domain.Customer;
-
-import model.domain.Customer;
-
-import model.domain.Customer;
-
 import model.domain.Customer;
 
 public class HashMapTest {
